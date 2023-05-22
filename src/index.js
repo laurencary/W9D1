@@ -2,18 +2,25 @@ console.log("Webpack is working!");
 
 import MovingObject from "./moving_object.js";
 // import Asteroid from "./asteroid.js";
+import Game from './game.js';
 import GameView from "./game_view.js";
+window.Game = Game;
 window.GameView = GameView;
 window.MovingObject = MovingObject;
 // window.Asteroid = Asteroid;
 
 document.addEventListener('DOMContentLoaded',function(){
     const canvasEl = document.getElementById("game-canvas");
-    canvasEl.width = 500;
-    canvasEl.height = 500;
-    const ctx = canvasEl.getContext("2d");
-    
     const game = new GameView();
+
+    canvasEl.width = Game.DIM_X;
+    canvasEl.height = Game.DIM_Y;
+
+    const ctx = canvasEl.getContext("2d");
+    console.log(ctx);
+    // ctx.fillStyle = "black";
+    // ctx.fillRect(0,0,500,500);
+    
     game.start(ctx);
 
     // ctx.fillStyle = "limegreen";

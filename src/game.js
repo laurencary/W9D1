@@ -1,9 +1,9 @@
 import Asteroid from "./asteroid";
 
 class Game{
-    static DIM_X;
-    static DIM_Y;
-    static NUM_ASTEROIDS=1;
+    static DIM_X=500;
+    static DIM_Y=500;
+    static NUM_ASTEROIDS=100;
 
     addAsteroids(){
         this.asteroids = [];
