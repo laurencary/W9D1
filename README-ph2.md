@@ -1,4 +1,5 @@
-# Asteroids, Phase 2: `MovingObject` and `Asteroid`
+
+2# Asteroids, Phase 2: `MovingObject` and `Asteroid`
 
 In Phase 2, you will implement the base `MovingObject` class and its first
 derived class, `Asteroid`.
