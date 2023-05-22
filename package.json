@@ -1,20 +1,24 @@
 {
   "name": "w9d1",
   "version": "1.0.0",
-  "description": "In this practice, you will implement the classic game Asteroids.",
-  "main": "index.js",
+  "description": "classic game of asteroids",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    
+    "start": "webpack --watch --mode=development"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laurencary/W9D1.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lauren and Vincent",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/laurencary/W9D1/issues"
   },
-  "homepage": "https://github.com/laurencary/W9D1#readme"
+  "homepage": "https://github.com/laurencary/W9D1#readme",
+  "devDependencies": {
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
+  }
 }
