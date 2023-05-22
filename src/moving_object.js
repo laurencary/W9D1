@@ -1,11 +1,13 @@
+// import Game from './game.js'
 
 class MovingObject{
-    constructor(pos,vel,radius,color){
+    constructor(pos,vel,radius,color, game){
         //pos and vel will be [x,y]
         this.pos = pos;
         this.vel = vel;
         this.radius = radius;
         this.color = color;
+        this.game = game;
     }
 
     draw(ctx){
@@ -19,7 +21,9 @@ class MovingObject{
 
     move(){
         this.pos = [this.pos[0]+this.vel[0],this.pos[1]+this.vel[1]];
-        console.log('moved');
+        if (Math.min(...this.pos) < -50 || Math.max(...this.pos)>this.game.DIM_X){
+            this.pos = this.game.wrap(this.pos);
+        }
     }
 }
 

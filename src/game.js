@@ -9,7 +9,7 @@ class Game{
         this.asteroids = [];
         while(this.asteroids.length < Game.NUM_ASTEROIDS){
             const pos = this.randomPosition();
-            this.asteroids.push(new Asteroid(pos));
+            this.asteroids.push(new Asteroid(pos, this));
         }
     }
     randomPosition(){
@@ -27,6 +27,18 @@ class Game{
         for(let asteroid of this.asteroids){
             asteroid.move();
         }
+    }
+    wrap(pos){
+        // take in pos and reset to be in the canvas
+        for (let i = 0; i < pos.length; i++) {
+            if (pos[i] < 0) {
+                pos[i] = Game.DIM_X + Asteroid.RADIUS
+            } else if (pos[i] > Game.DIM_X ) {
+                pos[i] = 0 - Asteroid.RADIUS
+            }   
+            
+        }
+        return pos;
     }
 }
 

@@ -5,9 +5,11 @@ class Asteroid extends MovingObject {
     static COLOR = 'white';
     static RADIUS = 25;
 
-    constructor (pos) {
+    constructor (pos, game) {
+        console.log(game);
         const vel = Util.randomVec(1);
-        super(pos, vel, Asteroid.RADIUS, Asteroid.COLOR);
+        super(pos, vel, Asteroid.RADIUS, Asteroid.COLOR, game);
+      
     }
 }
 
